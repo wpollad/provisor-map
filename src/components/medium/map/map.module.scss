@@ -1,0 +1,70 @@
+@import "src/styles/mixins";
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    overflow: auto;
+
+    width: calc(var(--count-size, 0) * var(--cell-size));
+    height: calc(var(--count-size, 0) * var(--cell-size));
+    overflow: hidden;
+
+    @include min-768 {
+        width: 100vh;
+        height: 100vh;
+    }
+}
+.map {
+    grid-template-columns: repeat(var(--count), var(--cell-size));
+    grid-template-rows: repeat(var(--count), var(--cell-size));
+    display: grid;
+    width: auto;
+    max-width: 100%;
+
+    position: absolute;
+
+    &.red {
+        top: 0;
+        left: 0;
+    }
+    &.blue {
+        bottom: 0;
+        left: 0;
+    }
+    &.yellow {
+        bottom: 0;
+        left: calc(
+            -1 * (var(--count) - var(--count-size, 0)) * var(--cell-size)
+        );
+    }
+    &.green {
+        top: 0;
+        left: calc(
+            -1 * (var(--count) - var(--count-size, 0)) * var(--cell-size)
+        );
+    }
+
+    @include min-768 {
+        top: 50% !important;
+        left: 50% !important;
+        bottom: auto !important;
+        right: auto !important;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.modal {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+}

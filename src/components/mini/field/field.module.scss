@@ -1,0 +1,66 @@
+@import "src/styles/mixins";
+@import "src/styles/fonts";
+
+.mapCell {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    font-size: calc(1.5rem * (7 / var(--count-size, 1)));
+    padding: 0;
+    cursor: pointer;
+    border: 1px solid #fff;
+
+    @include min-768 {
+        font-size: 2rem;
+    }
+
+    div {
+        position: absolute;
+        font-size: calc(0.75rem * (7 / var(--count-size, 1)));
+        padding: 5%;
+
+        @include min-768 {
+            font-size: 1rem;
+        }
+    }
+}
+
+.topLeft {
+    top: 5%;
+    left: 5%;
+}
+
+.topRight {
+    top: 5%;
+    right: 5%;
+}
+
+.bottomLeft {
+    bottom: 5%;
+    left: 5%;
+}
+
+.bottomRight {
+    bottom: 5%;
+    right: 5%;
+}
+
+.needLoot {
+    opacity: 0.2;
+}
+
+.isCurrent {
+    opacity: 0.6;
+
+    &.isSelected {
+        opacity: 1;
+    }
+}
+
+.notActive {
+    pointer-events: none;
+}
