@@ -8,6 +8,10 @@ const router = createBrowserRouter([
         element: <Full />,
     },
     {
+        path: "/tg",
+        element: <Full />,
+    },
+    {
         path: "/fragment",
         element: <Full isFragment={true} />,
     },
