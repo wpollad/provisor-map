@@ -1,4 +1,5 @@
 import { Full } from "./components/big/full/full";
+import { StageFull } from "./components/big/full/stageFull";
 import "../src/styles/globals.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -6,6 +7,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Full />,
+  },
+  {
+    path: "/stage",
+    element: <StageFull />,
   },
   {
     path: "/tg",
