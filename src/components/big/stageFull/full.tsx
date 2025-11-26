@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { StageMap } from "../../medium/map/stageMap";
+import { StageMap } from "../../medium/stageMap/map";
 import { ColorProps } from "../../../type/main";
 import { Colors } from "../../mini/colors/colors";
 import { Sizes } from "../../mini/sizes/sizes";

@@ -1,5 +1,5 @@
 import { Full } from "./components/big/full/full";
-import { StageFull } from "./components/big/full/stageFull";
+import { StageFull } from "./components/big/stageFull/full";
 import "../src/styles/globals.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
