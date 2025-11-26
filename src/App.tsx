@@ -21,6 +21,10 @@ const router = createBrowserRouter([
     element: <Full isFragment={true} />,
   },
   {
+    path: "/stage/fragment",
+    element: <Full isFragment={true} />,
+  },
+  {
     path: "/gooks",
     element: <Full isGooks={true} />,
   },
